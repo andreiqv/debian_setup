@@ -1,0 +1,3 @@
+#!/bin/bash
+# if status is not ready:
+/usr/sbin/cupsenable HP-LaserJet-1018

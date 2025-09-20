@@ -1,0 +1,25 @@
+#!/bin/bash
+# запустить инет
+# sleep 1s
+time=$(date +%H)
+
+# pogoda:
+# misk
+##URL="http://informer.gismeteo.ru/xml/26850_1.xml"
+## vit
+URL="http://informer.gismeteo.ru/xml/26666_1.xml"
+EXEC="/usr/bin/curl -s"
+a=`$EXEC $URL`
+
+#температура
+echo $a | tr "/>" "\n" | grep TEMPERATURE | sed -n 1p | sed -e 's/<TEMPERATURE //' |\
+sed -e 's/"//g' | tr -d "min=" | tr -d "max=" | sed -e 's/ //' |\
+sed -e 's/ /../' | gawk '{ print "Temp.: ",$1,"C" }'
+#ветер
+echo $a | tr "/>" "\n" | grep WIND | sed -n 1p | sed -e 's/<WIND //' |\
+sed -e 's/"//g' | tr -d "min=" | tr -d "max=" | sed -e 's/ //' |\
+gawk '{ print "Wind:   ",($1+$2)/2,"m/s" }'
+#давление
+echo $a | tr "/>" "\n" | grep PRESSURE | sed -n 1p | sed -e 's/<PRESSURE //' |\
+sed -e 's/"//g' | tr -d "min=" | tr -d "max=" | sed -e 's/ //' |\
+gawk '{ print "Press.: ",($1+$2)/2,"mm" }'

@@ -1,0 +1,29 @@
+#!/bin/bash
+# ctrl+alt+u
+
+sudo pm-suspend;
+
+#sleep 5; killall xfce4-display-settings;
+#sleep 5; killall xfce4-display-settings;
+#sleep 5; killall xfce4-display-settings;
+#sleep 5; killall xfce4-display-settings;
+
+#sudo ifconfig wlan0 down
+
+
+#old:
+#/s/ppp-off;
+#sleep 0.2s;
+#powersave -u;
+#sudo pm-suspend;
+#sleep 0.5s;
+# /s/ppp-byfly;
+# sudo ifconfig wlan0 down;
+#echo "ok";
+
+
+sleep 2;
+killall xfce4-display-settings;
+sleep 5;
+sudo hdparm -B 100 /dev/sdb;
+#/s/disk-set;

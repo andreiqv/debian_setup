@@ -1,0 +1,61 @@
+#!/bin/bash
+# beep -l 900 -r 3 -f 500
+
+# q=0 send mail
+# q=1 send sms
+
+q=0;
+if [ $q -eq 1 ]; then
+  echo "yes";
+  to='post@websms.ru';
+  mailfile='sendmail_websms.txt';
+else
+  echo "no";
+  mailfile='sendmail_zl3p.txt';
+  to='zl3p@mail.ru';
+fi;
+
+cd /s/files
+
+# sudo ssmtp zl3p@mail.ru < sendmail_zl3p.txt
+# sudo ssmtp post@websms.ru < sendmail_websms.txt
+
+# cp sendmail.txt sendmail.out
+# echo $1 >> sendmail.out
+# sudo ssmtp phxv@mail.ru < sendmail.out
+
+# cp /s/files/sendmail.txt sendmail.out
+# echo "mess=$1" >> sendmail.out
+# cat /s/files/sendmail.out
+# sed '$c\mess=qqq222' sendmail.out | sudo ssmtp zl3p@mail.ru
+
+#sed '$c\mess='$1 sendmail.txt | sudo ssmtp zl3p@mail.ru
+# sed '$c\mess='$1 sendmail.txt > 1.txt
+#| sudo ssmtp zl3p@mail.ru
+
+# sed '$d' sendmail.txt > sendmail.out
+# echo 'mess='$@ >> sendmail.out
+# sudo ssmtp zl3p@mail.ru < sendmail.out
+
+# sed '$d' sendmail.txt > sendmail.out
+
+# удаляем лишнее
+a=$1;
+b1=${a#"<qt>Incoming message "}
+b=${a:21}
+
+# здесь мы форматируем сроку "mess="
+sed '$c\mess='"$b" $mailfile | sudo ssmtp $to;
+
+# более длинный вариант:
+#echo 'mess='$b >> sendmail.out
+#sudo ssmtp zl3p@mail.ru < sendmail.out
+#sudo ssmtp zl3p@mail.ru < sendmail.out
+
+echo `date` $b >> /z/out.txt;
+
+#echo $b | festival --tts --language russian;
+
+
+
+

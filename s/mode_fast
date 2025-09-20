@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo idle3ctl -g /dev/sdb; # get raw idle3 timer value
+sudo hdparm -B 255 /dev/sdb;

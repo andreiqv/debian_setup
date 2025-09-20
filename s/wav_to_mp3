@@ -1,0 +1,19 @@
+#!/bin/sh
+# wav2mp3.sh
+# 22.02.2012
+
+if [ "$1" ] && [ "$2" ] && [ "$1" = "-b" ];
+then
+ BITRATE=$2
+else
+ BITRATE=128
+fi
+
+for a in *.wav
+do
+
+ OUTF=`echo "$a" | sed s/\.wav$/.mp3/g`
+ lame -b $BITRATE "$a" "$OUTF"
+
+done
+

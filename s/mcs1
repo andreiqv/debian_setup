@@ -1,0 +1,6 @@
+#!/bin/bash
+
+python /s/mcs.py $1 $2
+
+
+

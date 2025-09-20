@@ -1,0 +1,7 @@
+#!/bin/bash
+# begining working
+conky &
+/s/ppp-byfly
+psi &
+claws-mail &
+# thunderbird &

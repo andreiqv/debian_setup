@@ -1,0 +1,17 @@
+#!/bin/bash
+# 1111111111111111111
+curdir=$(pwd);
+path=$1;
+echo "curdir=$curdir";
+echo "path=$path";
+#echo "$0 $1";
+#echo "tar zcvf $path.tar.gz $path";
+
+repl="";
+new=${path/$curdir/$repl};
+echo "new=$new";
+
+sleep 30;
+
+
+

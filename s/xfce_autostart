@@ -1,0 +1,53 @@
+#!/bin/bash
+# add this to xfcet autostart
+# begining working 
+
+/s/monitor 1
+#sudo hdparm -B 50 /dev/sdb
+
+#xbacklight -set 50;
+#xset -dpms; #energy off
+#xset s off; #saver off
+
+#/l/pr/opencv/2016_sensor/01/a.out
+
+# wifi
+#sudo ifconfig wlan0 down
+
+# ram-disk
+#sudo mount -t tmpfs -o size=256M tmpfs /ramdisk
+#sudo chmod 777 /ramdisk
+
+#sudo ifconfig wlp2s0 down
+
+rm /home/z/.xsession-errors
+rm /home/z/.xsession-errors.old
+
+mkdir -p /ram/cache/qupzilla/
+mkdir -p /ram/cache/seamonkey/
+
+#sudo mount -t davfs -o noexec https://webdav.yandex.com /mnt/ya/
+
+#claws-mail &
+# xfconf-query --channel xfce4-desktop --list
+#echo "111"
+
+#xset s off
+sh /s/bright 4200;
+xset s off -dpms;
+#sudo hdparm -B 127 /dev/sdb;
+sudo hdparm -B 100 /dev/sdb;
+
+#sleep 2
+#sudo python3 /s/python/brightness.py 4200 &
+#python2 /s/python_auto.py & 
+#python3 /s/python/beep.py
+#python3 /w/money/check_crypto.py &
+python3 /s/python/ram.py &
+
+source /mnt/ext1/venv/torch/bin/activate && python3 /s/python/chatgpt_gui.py;
+
+#python2 /w/WORK/python/web/get_count.py &
+
+
+

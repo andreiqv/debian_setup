@@ -1,0 +1,1 @@
+sudo xrandr --output HDMI-1 --auto --output eDP-1 -on --noprimary 

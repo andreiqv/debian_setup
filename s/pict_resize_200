@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function pause(){
+   read -p "$*"
+}
+
+convert -resize 200 $1 $1-w200.jpg
+
+echo 'ok'
+
+

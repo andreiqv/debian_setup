@@ -1,0 +1,5 @@
+python3 "$1";
+pause 'Press [Enter] key to continue...';
+
+
+

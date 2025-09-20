@@ -1,0 +1,4 @@
+#!/bin/bash
+# cat /usr/share/foo2zjs/firmware/sihp1018.dl > /dev/usb/lp0
+sudo /etc/init.d/cups restart
+/usr/sbin/cupsenable HP-LaserJet-1018

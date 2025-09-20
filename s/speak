@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# if [ "$1" = "1" ]
+# then
+#	beep -l 300 -f 500 -r 5 & echo "В ящике новое письмо" | festival --tts --language russian;
+#fi
+
+case $1 in
+	"1")
+	beep -l 300 -f 500 -r 5 & echo "В ящике новое письмо." | festival --tts --language russian;;
+	"2")
+	beep -l 300 -f 500 -r 2 & echo "kopete. Новое сообщение." | festival --tts --language russian;;
+	"3")
+	beep -l 300 -f 500 -r 2 & echo "Новое сообщение. +Аськ+а на пр+оводе." | festival --tts --language russian;;
+	"4")
+	beep -l 300 -f 500 -r 2 & echo "Новое сообщение. Скайп вызывает." | festival --tts --language russian;;
+
+
+esac
+

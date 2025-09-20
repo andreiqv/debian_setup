@@ -1,0 +1,56 @@
+#!/bin/bash
+
+killall mplayer;
+
+logfile=/ram/log/radio.log
+
+case $1 in
+	
+	0)
+          exit 0
+          ;;
+          
+  	1)   # germany        
+         mplayer https://mp3channels.webradio.antenne.de/antenne -cache 512 -cache-min 80 > $logfile
+         # mplayer http://188.40.107.198:21200/stream/1/ > $logfile
+          ;;
+                   
+	5)   # germany - relax          
+          mplayer -playlist http://stream.absolutradio.de/relax/mp3-128/listenlive.m3u > $logfile
+          ;;
+          
+	6)	 	# germany        
+         #mplayer http://mp3channels.webradio.antenne.de:80/antenne > $logfile         
+         ;;
+	
+	7)		# germany        
+         #mplayer http://ga-stream01.ga-bonn.de:80/live128 > $logfile     
+         ;;   
+
+	8)		# germany http://www.ballermann-radio.de6
+         #mplayer http://80.237.159.25:8100/ > $logfile
+         ;; 
+          
+	9)    #jap
+         #mplayer -playlist http://japanradio.ru/playlist.m3u > $logfile
+         ;; 
+          
+         
+    *)   # ПОКА ЭТО НАМ НЕ НУЖНО! но можно будет вернуть.
+			# от 1 до 4
+			echo "radio=$1";
+         mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio$1_mf_p;
+         ;;
+esac
+
+#if [ $1 -eq '0' ]; then
+	#exit 0;
+#fi	
+
+#if [ $1 -eq '5' ]; then
+#	mplayer -playlist http://japanradio.ru/playlist.m3u
+#fi	
+
+#mplayer http://www.bbc.co.uk/radio/listen/live/r$1_aaclca.pls;
+
+

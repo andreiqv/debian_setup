@@ -1,0 +1,4 @@
+#!/bin/bash
+# отключить инет
+sudo poff dsl-provider
+sudo ifconfig

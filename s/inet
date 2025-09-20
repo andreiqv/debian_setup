@@ -1,0 +1,6 @@
+#!/bin/bash
+# begining working
+cd /zdisk/zsp/linux-config/copes_soft_configes/files_for_inet/1_byfly/
+sudo cp interfaces /etc/network/
+sudo cp resolv.conf /etc/
+sudo /etc/init.d/networking restart

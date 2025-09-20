@@ -1,0 +1,3 @@
+#!/bin/bash
+killall mpg123
+mpg123 --list /z/music/list_$1 -z &

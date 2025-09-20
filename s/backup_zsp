@@ -1,0 +1,10 @@
+#!/bin/bash
+
+path_backup=/media/z/backup/
+rsync -ax /mnt/work $path_backup --delete --progress
+rsync -ax /mnt/zsp $path_backup --delete --progress
+rsync -ax /mnt/zdata $path_backup --delete --progress
+
+
+
+

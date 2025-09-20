@@ -1,0 +1,3 @@
+xrandr --output HDMI-1 --auto --output eDP-1 --off --noprimary 
+
+#xrandr --output VGA-1 --mode 1360x768 --rate 75 --output eDP-1 --off --noprimary 

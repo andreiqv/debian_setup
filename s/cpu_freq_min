@@ -1,0 +1,3 @@
+#!/bin/bash
+# sudo cpufreq-set -f 1200000;
+sudo cpufreq-set -g powersave;

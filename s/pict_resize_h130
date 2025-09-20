@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function pause(){
+   read -p "$*"
+}
+
+convert -geometry x130 $1 $1-h130.jpg
+
+echo 'ok'
+
+

@@ -1,0 +1,2 @@
+sudo hdparm -y /dev/sdb
+

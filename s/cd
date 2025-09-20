@@ -1,0 +1,5 @@
+#!/bin/bash
+# mount flash diks
+sudo mount /dev/sr0 /mnt/cd -o ro,umask=0,iocharset=utf8
+sudo hdparm -E 12 /dev/sr0
+

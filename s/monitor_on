@@ -1,0 +1,3 @@
+/s/bright 4200;
+xset -display $DISPLAY dpms force on
+#/s/bright 4200

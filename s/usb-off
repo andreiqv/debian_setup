@@ -1,0 +1,3 @@
+#!/bin/bash
+# выключить винчестер hdb (standby) - нужны права ROOT
+sudo umount /mnt/usb

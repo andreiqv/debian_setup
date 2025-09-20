@@ -1,0 +1,10 @@
+#!/bin/bash
+# begining working
+conky &
+
+# INET:
+/s/ppp-byfly
+# psi &
+# claws-mail &
+
+# thunderbird &

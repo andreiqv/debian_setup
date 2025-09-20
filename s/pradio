@@ -1,0 +1,4 @@
+#!/bin/bash
+killall mplayer
+#mpg123 --list /z/music/list_$1 -z &
+mplayer http://www.bbc.co.uk/radio/listen/live/r$1_aaclca.pls

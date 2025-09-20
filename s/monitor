@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# выключить внешний монитор (произойдет перестройка рабочей области, т.е. всё перейдет на 1-ый монитор)
+
+if [ $1 -eq '1' ]; then
+	xrandr --output VGA-1 --off;	
+fi	
+
+if [ $1 -eq '2' ]; then
+    xrandr --output VGA-1 --auto --primary --output eDP-1 --off
+fi	
+
+# расширение рабочего стола на 2-ой монитор:
+if [ $1 -eq '3' ]; then
+    xrandr --output VGA-1 --mode 1360x768 --rate 60.02  --same-as eDP-1 --noprimary;	
+	#xrandr --output VGA-1 --mode 1360x768 --rate 75  --right-of eDP-1 --noprimary;
+fi	
+
+if [ $1 -eq '4' ]; then
+	#xrandr --output VGA-1 --mode 1360x768 --rate 60.02  --same-as eDP-1 --noprimary;	
+	xrandr --output VGA-1 --mode 1360x768 --rate 75  --right-of eDP-1 --noprimary;
+fi	
+
+
+# управление яркостью внешнего монитора (но не подсветка)
+# полезно для того, чтобы приглушить на короткое время.
+
+if [ $1 -eq '5' ]; then
+	xrandr --output VGA-1 --brightness 0	
+fi	
+
+if [ $1 -eq '6' ]; then
+	xrandr --output VGA-1 --brightness 1
+fi	
+
+xset -dpms
+xset s noblank
+xset s off
+
+# --brightness 0.8
+

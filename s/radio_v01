@@ -1,0 +1,59 @@
+#!/bin/bash
+
+killall mplayer;
+
+
+case $1 in
+     0)
+          exit 0
+          ;;
+          
+         
+     3)   # germany - relax          
+          mplayer -playlist http://stream.absolutradio.de/hq/mp3/listenlive.m3u
+          ;;
+
+          
+     4)   # germany - relax          
+          mplayer -playlist http://stream.absolutradio.de/relax/mp3-128/listenlive.m3u
+          ;;
+          
+     5)
+          mplayer -playlist http://japanradio.ru/playlist.m3u
+          ;;
+     6)
+          mplayer -vo none mms://simul.freebit.net/shonanbeachfm
+          ;; 
+
+     7)
+			 # Beijing Joy FM
+          mplayer mms://alive.rbc.cn/fm876
+          ;; 
+          
+     8)
+          mplayer mms://alive.rbc.cn/fm1073
+          ;; 
+          
+     9)
+          mplayer http://219.142.120.27/chn
+          ;; 
+
+         
+     *)
+			# от 1 до 4
+			echo "radio=$1";
+         mplayer http://www.bbc.co.uk/radio/listen/live/r$1_aaclca.pls;
+         ;;
+esac
+
+#if [ $1 -eq '0' ]; then
+	#exit 0;
+#fi	
+
+#if [ $1 -eq '5' ]; then
+#	mplayer -playlist http://japanradio.ru/playlist.m3u
+#fi	
+
+#mplayer http://www.bbc.co.uk/radio/listen/live/r$1_aaclca.pls;
+
+

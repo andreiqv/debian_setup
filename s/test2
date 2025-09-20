@@ -1,0 +1,17 @@
+#!/bin/bash
+# 1111111111111111111
+file="'/s/1.txt'";
+echo "file=$file";
+a=${#file};
+echo "a=$a";
+b=$(($a-2));
+echo "b=$b";
+
+file2=${file:1:$b};
+echo "file2=$file2";
+echo "len2=${#file2}";
+
+cat $file2;
+
+
+

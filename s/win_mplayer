@@ -1,0 +1,3 @@
+#!/bin/bash
+wine /zdisk/win/mplayer/mplayer.exe $1
+sleep 1;

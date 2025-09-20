@@ -1,0 +1,17 @@
+#!/bin/bash
+# 1111111111111111111
+
+function pause(){
+   read -p "$*"
+}
+
+#pause 'Press [Enter] key to begin zip directory';
+
+#zip -r -D $1.zip $1;
+7z a $1.zip $1;
+echo "------------------";
+echo "zip -r $1.zip $1";
+echo "ok"
+#sleep 20;
+pause 'Press [Enter] key to continue...';
+

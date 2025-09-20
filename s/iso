@@ -1,0 +1,7 @@
+#!/bin/bash
+# выключить винчестер hdb (standby) - нужны права ROOT
+sudo mount -t iso9660 /mnt/linux3/debian6iso/debian-6.0.5-i386-DVD-1.iso /mnt/isodeb/1 -o loop
+sudo mount -t iso9660 /mnt/linux3/debian6iso/debian-6.0.5-i386-DVD-2.iso /mnt/isodeb/2 -o loop
+sudo mount -t iso9660 /mnt/linux3/debian6iso/debian-6.0.5-i386-DVD-3.iso /mnt/isodeb/3 -o loop
+## sudo mount -t iso9660 /mnt/linux3/debian6iso/debian-6.0.5-i386-DVD-4.iso /mnt/isodeb/4 -o loop
+

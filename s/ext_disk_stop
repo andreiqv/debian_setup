@@ -1,0 +1,27 @@
+#!/bin/bash
+# смонтировать внешний веник (на 320√б)
+sync;
+
+a=`cat /sys/block/sdc/removable`
+echo "res sdc = $a"
+
+if [ $a -eq '0' ]; then
+	sudo umount /dev/sdc;
+	sudo hdparm -y /dev/sdc;
+	sleep 1;
+	sudo hdparm -Y /dev/sdc;
+	exit 0
+fi
+
+a=`cat /sys/block/sdd/removable`
+echo "res sdd = $a"
+
+
+if [ $a -eq '0' ]; then
+	sudo umount /dev/sdd;
+	sudo hdparm -y /dev/sdd;
+	sleep 1;
+	sudo hdparm -Y /dev/sdd;
+	exit 0
+fi
+

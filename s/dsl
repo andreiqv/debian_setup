@@ -1,0 +1,7 @@
+#!/bin/bash
+# запустить инет
+sudo poff dsl-provider
+sudo pon dsl-provider
+sudo plog
+sleep 3s
+sudo route add default dev ppp0

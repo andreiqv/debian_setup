@@ -1,0 +1,9 @@
+#!/bin/bash
+# запустить инет
+sudo route add -net 192.168.0.0 netmask 255.255.0.0 gw 172.30.50.1 eth0
+sudo route add -net 172.16.0.0 netmask 255.240.0.0 gw 172.30.50.1 eth0
+sudo route add -net 10.0.0.0 netmask 255.0.0.0 gw 172.30.50.1 eth0
+sudo cp /z/_tmp/resolv.conf /etc/resolv.conf
+#linuxdcpp &
+eiskaltdcpp-gtk &
+

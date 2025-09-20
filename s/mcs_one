@@ -1,0 +1,25 @@
+#!/bin/bash
+
+function pause(){
+   read -p "$*"
+}
+
+echo "mcs"
+mcs $1
+echo "--------"
+echo;
+fullname=$1
+name=${fullname%.*}
+echo "$name.exe"
+$name.exe
+
+
+#echo "file=$1";
+#echo "dpi=$2";
+#echo "$0 $1 $2";
+#pdf2djvu $1 -o "$1".djvu --dpi=$2;
+
+pause 'Press [Enter] key to continue...';
+
+
+

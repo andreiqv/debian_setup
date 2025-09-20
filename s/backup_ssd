@@ -1,0 +1,9 @@
+#!/bin/bash
+
+path_backup=/media/z/9f0c4506-5578-4717-9029-6cf89149524a/ssd_backup/
+rsync -ax /w $path_backup --delete --progress
+rsync -ax /fat $path_backup --delete --progress
+
+
+
+

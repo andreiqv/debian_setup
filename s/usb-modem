@@ -1,0 +1,17 @@
+
+sudo ifconfig enp0s29u1u1 up
+sudo dhclient enp0s29u1u1
+
+sudo ifconfig enp0s29u1u2u2 up
+sudo dhclient enp0s29u1u2u2
+
+sudo ifconfig enp0s29u1u2u3 up
+sudo dhclient enp0s29u1u2u3
+
+sudo ifconfig enp0s29u1u2u3u4 up
+sudo dhclient enp0s29u1u2u3u4
+
+#ifconfig usb0 192.168.42.33 netmask 255.255.255.0
+#sudo ifconfig usb0 up			
+#sudo route del default			
+#sudo route add default gw 192.168.42.129 dev usb0

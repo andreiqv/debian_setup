@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# выключить внешний монитор (произойдет перестройка рабочей области, т.е. всё перейдет на 1-ый монитор)
+
+if [ $1 -eq '1' ]; then
+	xbacklight -set 0
+fi	
+
+if [ $1 -eq '5' ]; then
+	xbacklight -set 50
+fi	
+
+if [ $1 -eq '6' ]; then
+	xbacklight -set 60
+fi	
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+# ctrl+alt+u
+
+sudo pm-suspend;
+
+#sleep 1; killall xfce4-display-settings
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+# ctrl+alt+u
+
+python3 /s/sys_check_ram_tmp.py sudo shutdown -h now
+
