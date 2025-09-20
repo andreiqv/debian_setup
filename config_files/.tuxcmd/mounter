@@ -1,0 +1,131 @@
+[General]
+MounterUseFSTab=0
+MounterPushDown=0
+
+[tmpfs]
+DisplayText=R
+MountPath=/ram/tmp
+IconPath=
+MountCommand=
+UmountCommand=
+DeviceType=3
+
+[/dev/sda5]
+DisplayText=W
+MountPath=/w
+IconPath=
+MountCommand=
+UmountCommand=
+DeviceType=0
+
+[/dev/sda7]
+DisplayText=D
+MountPath=/data
+IconPath=
+MountCommand=
+UmountCommand=
+DeviceType=0
+
+[/dev/sda8]
+DisplayText=E
+MountPath=/mnt/ext1
+IconPath=
+MountCommand=
+UmountCommand=
+DeviceType=0
+
+[/dev/sda9]
+DisplayText=Z
+MountPath=/mnt/zsp1
+IconPath=
+MountCommand=
+UmountCommand=
+DeviceType=0
+
+[/dev/sda10]
+DisplayText=F
+MountPath=/mnt/fat1
+IconPath=
+MountCommand=
+UmountCommand=
+DeviceType=0
+
+[/dev/sdc]
+DisplayText=U
+MountPath=/mnt/usb
+IconPath=
+MountCommand=sudo mount /dev/sdc1 /mnt/usb -o umask=0
+UmountCommand=sudo umount /mnt/usb
+DeviceType=1
+
+[/dev/sdb7]
+DisplayText=l2
+MountPath=/mnt/lin2
+IconPath=
+MountCommand=sudo mount -t ext3 /dev/sdb7 /mnt/lin2
+UmountCommand=sudo umount /mnt/lin2
+DeviceType=0
+
+[/dev/sdb8]
+DisplayText=wk
+MountPath=/mnt/work
+IconPath=
+MountCommand=sudo mount -t vfat -o umask=0 /dev/sdb8 /mnt/work
+UmountCommand=sudo umount /mnt/work
+DeviceType=0
+
+[/dev/sdb9]
+DisplayText=z
+MountPath=/mnt/zsp
+IconPath=
+MountCommand=sudo mount -t vfat -o umask=0 /dev/sdb9 /mnt/zsp
+UmountCommand=sudo umount /mnt/zsp
+DeviceType=0
+
+[/dev/sdb10]
+DisplayText=zd
+MountPath=/mnt/zdata
+IconPath=
+MountCommand=sudo mount -t vfat -o umask=0 /dev/sdb10 /mnt/zdata
+UmountCommand=sudo umount /mnt/zdata
+DeviceType=0
+
+[/dev/sdb11]
+DisplayText=l
+MountPath=/mnt/lib
+IconPath=
+MountCommand=sudo mount -t ntfs -o ro /dev/sdb11 /mnt/lib
+UmountCommand=sudo umount /mnt/lib
+DeviceType=0
+
+[/dev/sdb12]
+DisplayText=s
+MountPath=/mnt/soft
+IconPath=
+MountCommand=sudo mount -t ntfs -o ro /dev/sdb12 /mnt/soft
+UmountCommand=sudo umount /mnt/soft
+DeviceType=0
+
+[/dev/sdb13]
+DisplayText=v
+MountPath=/mnt/video
+IconPath=
+MountCommand=sudo mount -t ext4 /dev/sdb13 /mnt/video
+UmountCommand=sudo umount /mnt/video
+DeviceType=0
+
+[/dev/sdb14]
+DisplayText=b
+MountPath=/mnt/buf
+IconPath=
+MountCommand=sudo mount -t vfat -o umask=0 /dev/sdb14 /mnt/buf
+UmountCommand=sudo umount /mnt/buf
+DeviceType=0
+
+[davfs]
+DisplayText=y
+MountPath=/mnt/ya
+IconPath=
+MountCommand=
+UmountCommand=
+DeviceType=4
